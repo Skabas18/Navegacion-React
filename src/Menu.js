@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import {  NavLink } from 'react-router-dom'
 
 const routes = [];
 
@@ -22,7 +22,7 @@ function Menu() {
         <nav>
             <ul>
                 {routes.map(route =>(
-                    <li>
+                    <li key={route.to}>
                         <NavLink style={({ isActive }) => ({ color: isActive ? 'red' : 'blue' })} to={route.to}>{route.text}</NavLink>
                     </li>
                 ))}
